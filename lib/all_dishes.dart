@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class AllDishes extends StatefulWidget {
@@ -8,6 +7,56 @@ class AllDishes extends StatefulWidget {
 }
 
 class _AllDishesState extends State<AllDishes> {
+  Widget dishList(
+      String imgPath, String dishName, String dishDetail, num price) {
+    return Padding(
+      padding: EdgeInsets.only(top: 16.0, left: 16.0, right: 16.0),
+      child: Card(
+        elevation: 5,
+        color: Colors.white,
+        child: Container(
+          height: 80,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                height: 60,
+                child: Image.asset(
+                  imgPath,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Spacer(),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    dishName,
+                    style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        color: Colors.grey,
+                        fontSize: 18),
+                  ),
+                  Text(dishDetail),
+                ],
+              ),
+              Spacer(),
+              Container(
+                height: 30,
+                width: 30,
+                color: Colors.grey[300],
+                child: Center(child: Text("\$ $price")),
+              ),
+              SizedBox(
+                width: 20,
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -69,366 +118,12 @@ class _AllDishesState extends State<AllDishes> {
                     TextStyle(fontWeight: FontWeight.w600, color: Colors.grey),
               ),
             ),
-            Padding(
-                padding: EdgeInsets.only(top: 16.0, left: 16.0, right: 16.0),
-                child: Card(
-                  elevation: 5,
-                  color: Colors.white,
-                  child: Container(
-                    height: 80,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          height: 60,
-                          child: Image.asset(
-                            'assets/profile.png',
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Spacer(),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              'Cheese Burger',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.grey,
-                                  fontSize: 18),
-                            ),
-                            Text('Burger with cheese'),
-                          ],
-                        ),
-                        Spacer(),
-                        Container(
-                          height: 30,
-                          width: 30,
-                          color: Colors.grey[300],
-                          child: Center(child: Text("\$10")),
-                        ),
-                        SizedBox(
-                          width: 20,
-                        )
-                      ],
-                    ),
-                  ),
-                )),
-            Padding(
-                padding: EdgeInsets.only(top: 16.0, left: 16.0, right: 16.0),
-                child: Card(
-                  elevation: 5,
-                  color: Colors.white,
-                  child: Container(
-                    height: 80,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          height: 60,
-                          child: Image.asset(
-                            'assets/profile.png',
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Spacer(),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              'Cheese Burger',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.grey,
-                                  fontSize: 18),
-                            ),
-                            Text('Burger with cheese'),
-                          ],
-                        ),
-                        Spacer(),
-                        Container(
-                          height: 30,
-                          width: 30,
-                          color: Colors.grey[300],
-                          child: Center(child: Text("\$10")),
-                        ),
-                        SizedBox(
-                          width: 20,
-                        )
-                      ],
-                    ),
-                  ),
-                )),
-            Padding(
-                padding: EdgeInsets.only(top: 16.0, left: 16.0, right: 16.0),
-                child: Card(
-                  elevation: 5,
-                  color: Colors.white,
-                  child: Container(
-                    height: 80,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          height: 60,
-                          child: Image.asset(
-                            'assets/profile.png',
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Spacer(),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              'Cheese Burger',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.grey,
-                                  fontSize: 18),
-                            ),
-                            Text('Burger with cheese'),
-                          ],
-                        ),
-                        Spacer(),
-                        Container(
-                          height: 30,
-                          width: 30,
-                          color: Colors.grey[300],
-                          child: Center(child: Text("\$10")),
-                        ),
-                        SizedBox(
-                          width: 20,
-                        )
-                      ],
-                    ),
-                  ),
-                )),
-            Padding(
-                padding: EdgeInsets.only(top: 16.0, left: 16.0, right: 16.0),
-                child: Card(
-                  elevation: 5,
-                  color: Colors.white,
-                  child: Container(
-                    height: 80,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          height: 60,
-                          child: Image.asset(
-                            'assets/profile.png',
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Spacer(),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              'Cheese Burger',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.grey,
-                                  fontSize: 18),
-                            ),
-                            Text('Burger with cheese'),
-                          ],
-                        ),
-                        Spacer(),
-                        Container(
-                          height: 30,
-                          width: 30,
-                          color: Colors.grey[300],
-                          child: Center(child: Text("\$10")),
-                        ),
-                        SizedBox(
-                          width: 20,
-                        )
-                      ],
-                    ),
-                  ),
-                )),
-            Padding(
-                padding: EdgeInsets.only(top: 16.0, left: 16.0, right: 16.0),
-                child: Card(
-                  elevation: 5,
-                  color: Colors.white,
-                  child: Container(
-                    height: 80,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          height: 60,
-                          child: Image.asset(
-                            'assets/profile.png',
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Spacer(),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              'Cheese Burger',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.grey,
-                                  fontSize: 18),
-                            ),
-                            Text('Burger with cheese'),
-                          ],
-                        ),
-                        Spacer(),
-                        Container(
-                          height: 30,
-                          width: 30,
-                          color: Colors.grey[300],
-                          child: Center(child: Text("\$10")),
-                        ),
-                        SizedBox(
-                          width: 20,
-                        )
-                      ],
-                    ),
-                  ),
-                )),
-            Padding(
-                padding: EdgeInsets.only(top: 16.0, left: 16.0, right: 16.0),
-                child: Card(
-                  elevation: 5,
-                  color: Colors.white,
-                  child: Container(
-                    height: 80,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          height: 60,
-                          child: Image.asset(
-                            'assets/profile.png',
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Spacer(),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              'Cheese Burger',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.grey,
-                                  fontSize: 18),
-                            ),
-                            Text('Burger with cheese'),
-                          ],
-                        ),
-                        Spacer(),
-                        Container(
-                          height: 30,
-                          width: 30,
-                          color: Colors.grey[300],
-                          child: Center(child: Text("\$10")),
-                        ),
-                        SizedBox(
-                          width: 20,
-                        )
-                      ],
-                    ),
-                  ),
-                )),
-            Padding(
-                padding: EdgeInsets.only(top: 16.0, left: 16.0, right: 16.0),
-                child: Card(
-                  elevation: 5,
-                  color: Colors.white,
-                  child: Container(
-                    height: 80,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          height: 60,
-                          child: Image.asset(
-                            'assets/profile.png',
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Spacer(),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              'Cheese Burger',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.grey,
-                                  fontSize: 18),
-                            ),
-                            Text('Burger with cheese'),
-                          ],
-                        ),
-                        Spacer(),
-                        Container(
-                          height: 30,
-                          width: 30,
-                          color: Colors.grey[300],
-                          child: Center(child: Text("\$10")),
-                        ),
-                        SizedBox(
-                          width: 20,
-                        )
-                      ],
-                    ),
-                  ),
-                )),
-            Padding(
-                padding: EdgeInsets.only(top: 16.0, left: 16.0, right: 16.0),
-                child: Card(
-                  elevation: 5,
-                  color: Colors.white,
-                  child: Container(
-                    height: 80,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          height: 60,
-                          child: Image.asset(
-                            'assets/profile.png',
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                        Spacer(),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              'Cheese Burger',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.grey,
-                                  fontSize: 18),
-                            ),
-                            Text('Burger with cheese'),
-                          ],
-                        ),
-                        Spacer(),
-                        Container(
-                          height: 30,
-                          width: 30,
-                          color: Colors.grey[300],
-                          child: Center(child: Text("\$10")),
-                        ),
-                        SizedBox(
-                          width: 20,
-                        )
-                      ],
-                    ),
-                  ),
-                )),
+            dishList('assets/profile.png', 'dishName', 'dishDetail', 10),
+            dishList('assets/profile.png', 'dishName', 'dishDetail', 10),
+            dishList('assets/profile.png', 'dishName', 'dishDetail', 10),
+            dishList('assets/profile.png', 'dishName', 'dishDetail', 10),
+            dishList('assets/profile.png', 'dishName', 'dishDetail', 10),
+            dishList('assets/profile.png', 'dishName', 'dishDetail', 10),
           ],
         ),
       ),
